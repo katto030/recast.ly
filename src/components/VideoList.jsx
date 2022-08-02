@@ -4,7 +4,7 @@ import exampleVideoData from '/src/data/exampleVideoData.js';
 var VideoList = (props) => (
   <div className="video-list">
     {props.videos.map(video =>
-      <VideoListEntry video={video} />
+      <VideoListEntry video={video} click={props.click}/>
     )}
   </div>
 );
