@@ -6,7 +6,8 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "test": "live-server --open=./SpecRunner.html --port=8081"
+    "test": "live-server --open=./SpecRunner.html --port=8081",
+    "start": "npx babel . --out-dir=compiled --presets=@babel/preset-react --ignore=node_modules,compiled --source-maps=inline --watch & npx live-server"
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
@@ -17,9 +18,10 @@
     "react-dom": "^16.14.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.1",
-    "@babel/core": "^7.12.3",
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.18.10",
     "@babel/preset-react": "^7.12.1",
+    "babel-watch": "^7.7.0",
     "chai": "^4.2.0",
     "live-server": "^1.2.1",
     "mocha": "^8.2.1",

@@ -60,7 +60,6 @@ describe('searchYouTube', function() {
 
   it('should accept `query` send it in GET request', function() {
     searchYouTube('cats', () => {});
-
     var params = getURLSearchParams(requests[0].url);
     expect(params.q).to.equal('cats');
   });
